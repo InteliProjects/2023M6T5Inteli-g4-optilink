@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*Definindo cor de fundo*/
+:root{
+  background-color: #111827;
+}

@@ -1,0 +1,1 @@
+ba,uf,municipio,matricula_tecnico,id_venda,setor,dt_abertura_ba,dt_inicio_execucao,dt_fim_execucao,instalado,logradouro,numero,bairro,cep,latitude,longitude

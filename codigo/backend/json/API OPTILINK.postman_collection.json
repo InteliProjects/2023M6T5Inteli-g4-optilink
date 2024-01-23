@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "5d7dbc8f-5931-49ca-8aac-b39b3ff6f2c2",
+		"name": "API OPTILINK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23795560",
+		"_collection_link": "https://bold-spaceship-16143.postman.co/workspace/M6~aabc6d1b-84fb-4b37-98f8-29cf9550da1a/collection/23795560-5d7dbc8f-5931-49ca-8aac-b39b3ff6f2c2?action=share&source=collection_link&creator=23795560"
+	},
+	"item": [
+		{
+			"name": "SPRINT 5",
+			"item": [
+				{
+					"name": "DELETE TECNICO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/partida_tecnicos/TR758729",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"partida_tecnicos",
+								"TR758729"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE SERVIÇO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/servicos/4-153679763543",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"servicos",
+								"4-153679763543"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAÇÃO TECNICO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"UF\": \"MG\",\r\n  \"Nome\": \"JOÃO SILVA\",\r\n  \"Ativo\": true,\r\n  \"Latitude\": \"-19.919068\",\r\n  \"Longitude\": \"-43.938575\",\r\n  \"Territorio_Servico_Nome\": \"Região Metropolitana\",\r\n  \"Cidade\": \"Belo Horizonte\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/partida_tecnicos/TR615267",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"partida_tecnicos",
+								"TR615267"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAÇÃO SERVIÇO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ba\": \"BA00123\",\r\n  \"uf\": \"RJ\",\r\n  \"municipio\": \"Rio de Janeiro\",\r\n  \"matricula_tecnico\": \"TEC123\",\r\n  \"setor\": \"Setor1\",\r\n  \"dt_abertura_ba\": \"2023-01-01\",\r\n  \"dt_inicio_execucao\": \"2023-01-02\",\r\n  \"dt_fim_execucao\": \"2023-01-03\",\r\n  \"instalado\": true,\r\n  \"logradouro\": \"Rua das Flores\",\r\n  \"numero\": \"100\",\r\n  \"bairro\": \"Jardim Botânico\",\r\n  \"cep\": \"12345-678\",\r\n  \"latitude\": \"-22.906847\",\r\n  \"longitude\": \"-43.172896\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/servicos/4-156099861937",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"servicos",
+								"4-156099861937"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD DADOS SERVIÇOS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/maria/OneDrive - gorresen.com/Documentos/GitHub/grupo4/codigo/arquivos/servicos_setembro_pr_curitiba.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/uploadInstalacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"uploadInstalacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD DADOS TECNICOS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/maria/OneDrive - gorresen.com/Documentos/GitHub/grupo4/codigo/arquivos/partida_tecnicos.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/uploadPartidaTecnicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"uploadPartidaTecnicos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UPLOAD DADOS TECNICOS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/maria/OneDrive - gorresen.com/Documentos/GitHub/grupo4/codigo/arquivos/partida_tecnicos.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/uploadPartidaTecnicos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"uploadPartidaTecnicos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-5WQmLbiY5l8EjniDJP2P/Ze0eOQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Dec 2023 16:25:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Arquivo CSV processado e dados inseridos na tabela partida_tecnicos."
+						}
+					]
+				},
+				{
+					"name": "ATIVAR ALGORITMO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"estado\": \"PR\",\r\n  \"cidade\": \"CURITIBA\",\r\n  \"data\": \"2023-09-02\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/algoritmo/send-to-flask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"algoritmo",
+								"send-to-flask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ALOCAÇÃO FILTRO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"Curitiba\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/tabelaAlocacao?uf=PR&dt_inicio_execucao=2023-09-27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tabelaAlocacao"
+							],
+							"query": [
+								{
+									"key": "uf",
+									"value": "PR"
+								},
+								{
+									"key": "dt_inicio_execucao",
+									"value": "2023-09-27"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CIDADE/UF DEMANDAS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"Curitiba\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cidadeEstado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cidadeEstado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UF DE DEMANDAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/uf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"uf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MUNICIPIOS DE DEMANDAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/municipios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"municipios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MUNICIPIOS DO HISTORICO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/municipiosDoHistorico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"municipiosDoHistorico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DATAS DO HISTORICO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/datasDoHistorico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"datasDoHistorico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DADOS HISTORICO ALOCACAO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/historicoAlocacao?data_gerado=2023-12-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"historicoAlocacao"
+							],
+							"query": [
+								{
+									"key": "data_gerado",
+									"value": "2023-12-20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DADOS HISTORICO DEMANDAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/historicoInstalacao?data_gerado=2023-12-20&municipio=CURITIBA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"historicoInstalacao"
+							],
+							"query": [
+								{
+									"key": "data_gerado",
+									"value": "2023-12-20"
+								},
+								{
+									"key": "municipio",
+									"value": "CURITIBA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DADOS HISTORICO TECNICOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/historicoTecnicos?data_gerado=2023-12-20&municipio=CURITIBA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"historicoTecnicos"
+							],
+							"query": [
+								{
+									"key": "data_gerado",
+									"value": "2023-12-20"
+								},
+								{
+									"key": "municipio",
+									"value": "CURITIBA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DATAS DE DEMANDA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/datas?municipio=CURITIBA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"datas"
+							],
+							"query": [
+								{
+									"key": "municipio",
+									"value": "CURITIBA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CLUSTERS DA ALOCACAO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/clusters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"clusters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TECNICOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/tecnicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tecnicos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Rotas utilizadas no projeto OptiLink"
+		}
+	]
+}
